@@ -1,4 +1,5 @@
 # StatusStories
+#### [APK Link](https://goo.gl/jZzyg8) | [Video Link](https://goo.gl/7Jx6Hx)
 StatusStories is an photo view implementation of
 - Snapchat stories
 - Instagram stories
@@ -8,7 +9,7 @@ StatusStories is an photo view implementation of
 <img src="images/demo.gif" width=216 height=400 />
 
 
-#### [APK Link](https://goo.gl/jZzyg8) | [Video Link](https://goo.gl/7Jx6Hx)
+
 
 <img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 />
 
@@ -16,7 +17,6 @@ StatusStories is an photo view implementation of
 
 
 ## Features at glance
-------------------
 - Highly customizable Stories view
 - Click left right edge to move forward or previous just like WhatsApp
 - Hold the center area to pause
@@ -28,7 +28,6 @@ StatusStories is an photo view implementation of
 
 
 ## Install
--------
 #1 Add it in your root build.gradle at the end of repositories:
 
 ```groovy
@@ -48,9 +47,7 @@ StatusStories is an photo view implementation of
 
 ```
 
-How to Use
-----------
-
+## How to Use
 #1. As this uses Glide internally, please add this to root level repositories as this library uses glide to load the images.
 ```groovy
         maven { name 'glide-snapshot'; url 'http://oss.sonatype.org/content/repositories/snapshots' }
@@ -73,16 +70,11 @@ How to Use
 ```
 
 
-Pulls are most welcome
-----------------------
-
-
-
+## Pulls are most welcome
 Inspired by [StoriesProgressView](https://github.com/shts/StoriesProgressView)
 
 
-License
----
+## License
 
 ```
 Copyright (C) 2017 Rahul Janagouda
