@@ -26,13 +26,20 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
     public static final String STATUS_RESOURCES_KEY = "statusStoriesResources";
     public static final String STATUS_DURATION_KEY = "statusStoriesDuration";
     public static final String STATUS_DURATIONS_ARRAY_KEY = "statusStoriesDurations";
+    public static final String IS_IMMERSIVE_KEY = "isImmersive";
+    public static final String IS_CACHING_ENABLED_KEY = "isCaching";
+    public static final String IS_TEXT_PROGRESS_ENABLED_KEY = "isText";
+
     private static StoryStatusView storyStatusView;
     private ImageView image;
     private int counter = 0;
 
     private String[] statusResources;
-//    private long[] statusResourcesDuration;
+    //    private long[] statusResourcesDuration;
     private long statusDuration;
+    private boolean isImmersive = true;
+    private boolean isCaching = true;
+    private static boolean isTextEnabled = true;
     private ProgressTarget<String, Bitmap> target;
 
     @Override
@@ -43,6 +50,9 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
         statusResources = getIntent().getStringArrayExtra(STATUS_RESOURCES_KEY);
         statusDuration = getIntent().getLongExtra(STATUS_DURATION_KEY, 3000L);
 //        statusResourcesDuration = getIntent().getLongArrayExtra(STATUS_DURATIONS_ARRAY_KEY);
+        isImmersive = getIntent().getBooleanExtra(IS_IMMERSIVE_KEY, true);
+        isCaching = getIntent().getBooleanExtra(IS_CACHING_ENABLED_KEY, true);
+        isTextEnabled = getIntent().getBooleanExtra(IS_TEXT_PROGRESS_ENABLED_KEY, true);
 
         ProgressBar imageProgressBar = findViewById(R.id.imageProgressBar);
         TextView textView = findViewById(R.id.textView);
@@ -69,8 +79,8 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
                 .load(target.getModel())
                 .asBitmap()
                 .crossFade()
-                .skipMemoryCache(false)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(!isCaching)
+                .diskCacheStrategy(isCaching ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE)
                 .transform(new CenterCrop(image.getContext()), new DelayBitmapTransformation(1000))
                 .listener(new LoggingListener<String, Bitmap>())
                 .into(target);
@@ -115,8 +125,8 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
                 .asBitmap()
                 .crossFade()
                 .centerCrop()
-                .skipMemoryCache(false)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(!isCaching)
+                .diskCacheStrategy(isCaching ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE)
                 .transform(new CenterCrop(image.getContext()), new DelayBitmapTransformation(1000))
                 .listener(new LoggingListener<String, Bitmap>())
                 .into(target);
@@ -134,8 +144,8 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
                 .asBitmap()
                 .centerCrop()
                 .crossFade()
-                .skipMemoryCache(false)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(!isCaching)
+                .diskCacheStrategy(isCaching ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE)
                 .transform(new CenterCrop(image.getContext()), new DelayBitmapTransformation(1000))
                 .listener(new LoggingListener<String, Bitmap>())
                 .into(target);
@@ -144,7 +154,7 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+        if (isImmersive && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
             if (hasFocus) {
                 getWindow().getDecorView()
                         .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -200,8 +210,13 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
         protected void onConnecting() {
             progress.setIndeterminate(true);
             progress.setVisibility(View.VISIBLE);
-            text.setVisibility(View.VISIBLE);
-            text.setText("connecting");
+
+            if (isTextEnabled) {
+                text.setVisibility(View.VISIBLE);
+                text.setText("connecting");
+            } else {
+                text.setVisibility(View.INVISIBLE);
+            }
             storyStatusView.pause();
         }
 
@@ -209,8 +224,16 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
         protected void onDownloading(long bytesRead, long expectedLength) {
             progress.setIndeterminate(false);
             progress.setProgress((int) (100 * bytesRead / expectedLength));
-            text.setText(String.format(Locale.ROOT, "downloading %.2f/%.2f MB %.1f%%",
-                    bytesRead / 1e6, expectedLength / 1e6, 100f * bytesRead / expectedLength));
+
+            if (isTextEnabled) {
+                text.setVisibility(View.VISIBLE);
+                text.setText(String.format(Locale.ROOT, "downloading %.2f/%.2f MB %.1f%%",
+                        bytesRead / 1e6, expectedLength / 1e6, 100f * bytesRead / expectedLength));
+            } else {
+                text.setVisibility(View.INVISIBLE);
+            }
+
+
             storyStatusView.pause();
 
         }
@@ -218,7 +241,14 @@ public class StatusStoriesActivity extends AppCompatActivity implements StorySta
         @Override
         protected void onDownloaded() {
             progress.setIndeterminate(true);
-            text.setText("decoding and transforming");
+            if (isTextEnabled) {
+                text.setVisibility(View.VISIBLE);
+                text.setText("decoding and transforming");
+            } else {
+                text.setVisibility(View.INVISIBLE);
+            }
+
+
             storyStatusView.pause();
         }
 

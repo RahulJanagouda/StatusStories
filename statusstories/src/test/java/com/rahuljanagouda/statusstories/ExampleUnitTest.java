@@ -1,4 +1,4 @@
-package com.rahuljanagouda.statussories;
+package com.rahuljanagouda.statusstories;
 
 import org.junit.Test;
 
