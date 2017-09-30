@@ -1,23 +1,21 @@
 # StatusStories
-
-
 StatusStories is an photo view implementation of
 - Snapchat stories
 - Instagram stories
 - Whatsapp Statuses
 - Facebook Messenger Stories
+
 <img src="images/demo.gif" width=216 height=400 />
 
 
-#### [APK Link](https://goo.gl/jZzyg8)
-
-#### [Video Link](https://goo.gl/7Jx6Hx)
+#### [APK Link](https://goo.gl/jZzyg8) | [Video Link](https://goo.gl/7Jx6Hx)
 
 <img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 />
+
 <img src="images/i0006.jpg" width=216 height=400 /> <img src="images/i0004.jpg" width=216 height=400 />
 
 
-Features at glance
+## Features at glance
 ------------------
 - Highly customizable Stories view
 - Click left right edge to move forward or previous just like WhatsApp
@@ -28,30 +26,26 @@ Features at glance
 - Control the duration of each Story
 
 
-Install
+## Install
 -------
-Add it in your root build.gradle at the end of repositories:
+#1 Add it in your root build.gradle at the end of repositories:
 
 ```groovy
-allprojects {
+	allprojects {
 		repositories {
-			...
-			maven { url "https://jitpack.io" }
+		...
+		maven { url "https://jitpack.io" }
 		}
-}
-
+	}
 ```
 
-Add the dependency
-
+#2. Add the dependency
 ```
 	dependencies {
 	        compile 'com.github.RahulJanagouda:StatusStories:master-SNAPSHOT'
 	}
 
 ```
-
-
 
 How to Use
 ----------
