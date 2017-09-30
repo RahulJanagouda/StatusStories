@@ -24,6 +24,7 @@ StatusStories is an photo view implementation of
 - Progress bar indicates the downloaded content from the internet
 - Immersive mode enables the more engaging experience
 - Control the duration of each Story
+- Finishes after the last story ends
 
 
 ## Install
@@ -70,6 +71,11 @@ How to Use
         a.putExtra(StatusStoriesActivity.IS_TEXT_PROGRESS_ENABLED_KEY, isTextEnabled);
         startActivity(a);
 ```
+
+
+Pulls are most welcome
+----------------------
+
 
 
 Inspired by [StoriesProgressView](https://github.com/shts/StoriesProgressView)
