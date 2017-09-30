@@ -1,19 +1,20 @@
 # StatusStories
 
+
 StatusStories is an photo view implementation of
 - Snapchat stories
 - Instagram stories
 - Whatsapp Statuses
 - Facebook Messenger Stories
-
+<img src="images/demo.gif" width=216 height=400 />
 
 
 #### [APK Link](https://goo.gl/jZzyg8)
 
 #### [Video Link](https://goo.gl/7Jx6Hx)
 
-<img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 /> <img src="images/i0006.jpg" width=216 height=400 />
-<img src="images/i0004.jpg" width=216 height=400 /> <img src="images/i0005.jpg" width=216 height=400 />
+<img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 />
+<img src="images/i0006.jpg" width=216 height=400 /> <img src="images/i0004.jpg" width=216 height=400 />
 
 
 Features at glance
