@@ -14,11 +14,11 @@ Video
 https://goo.gl/7Jx6Hx
 
 
-<img src="images/i0001.jpg" width=433 height=800 />
-<img src="images/i0002.jpg" width=433 height=800 />
-<img src="images/i0006.jpg" width=433 height=800 />
-<img src="images/i0004.jpg" width=433 height=800 />
-<img src="images/i0005.jpg" width=433 height=800 />
+<img src="images/i0001.jpg" width=216 height=400 />
+<img src="images/i0002.jpg" width=216 height=400 />
+<img src="images/i0006.jpg" width=216 height=400 />
+<img src="images/i0004.jpg" width=216 height=400 />
+<img src="images/i0005.jpg" width=216 height=400 />
 
 Features at glance
 ------------------
@@ -69,7 +69,7 @@ Add the dependency
 
 ```
 	dependencies {
-	        compile 'com.github.shts:StoriesProgressView:1.2.0'
+	        compile 'com.github.rahuljanagouda:StatusStories:1.0.1'
 	}
 
 ```

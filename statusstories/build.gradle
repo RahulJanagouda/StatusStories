@@ -1,4 +1,30 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.RahulJanagouda'
+
+
+//ext {
+//    bintrayRepo = 'StatusStories'
+//    bintrayName = 'statusstories'
+//
+//    publishedGroupId = 'com.rahuljanagouda'
+//    libraryName = 'statusstories'
+//    artifact = 'statusstories'
+//
+//    libraryDescription = 'StatusStories is an photo view implementation of Snapchat stories, Instagram stories, Whatsapp Statuses, Facebook Messenger Stories'
+//    siteUrl = 'https://github.com/RahulJanagouda/StatusStories'
+//    gitUrl = 'https://github.com/RahulJanagouda/StatusStories.git'
+//
+//    libraryVersion = '1.0.1'
+//
+//    developerId = 'rahuljanagouda'
+//    developerName = 'Rahul Janagouda'
+//    developerEmail = 'rahul.janagouda@gmail.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
 
 android {
     compileSdkVersion 26
@@ -8,7 +34,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -36,3 +62,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
