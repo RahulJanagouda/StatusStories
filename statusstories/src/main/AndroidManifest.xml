@@ -11,6 +11,6 @@
         <meta-data
             android:name="com.rahuljanagouda.statusstories.glideProgressBar.OkHttpProgressGlideModule"
             android:value="GlideModule" />
-        <activity android:name="com.rahuljanagouda.statusstories.StatusStoriesActivity" />
+        <activity android:exported="true" android:name="com.rahuljanagouda.statusstories.StatusStoriesActivity" />
     </application>
 </manifest>
