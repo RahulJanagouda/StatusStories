@@ -1,6 +1,6 @@
 # StatusStories
 #### [APK Link](https://goo.gl/jZzyg8) | [Video Link](https://goo.gl/7Jx6Hx)
-StatusStories is an photo view implementation of
+StatusStories helps you implement Photo Stories similar to
 - Snapchat stories
 - Instagram stories
 - Whatsapp Statuses
