@@ -8,9 +8,6 @@ StatusStories is an photo view implementation of
 
 <img src="images/demo.gif" width=216 height=400 />
 
-
-
-
 <img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 />
 
 <img src="images/i0006.jpg" width=216 height=400 /> <img src="images/i0004.jpg" width=216 height=400 />
@@ -28,8 +25,7 @@ StatusStories is an photo view implementation of
 
 
 ## Install
-#1 Add the below in your root build.gradle at the end of repositories:
-This library is using glide internally to download and cache the images.
+#1 Add the below lines in your root build.gradle. This library is using glide internally to download and cache the images.
 
 ```groovy
 	allprojects {
@@ -40,7 +36,6 @@ This library is using glide internally to download and cache the images.
             maven { name 'glide-snapshot'; url 'http://oss.sonatype.org/content/repositories/snapshots' }
         }
     }
-
 ```
 
 #2. Add the dependency
@@ -48,7 +43,6 @@ This library is using glide internally to download and cache the images.
 	dependencies {
 	        compile 'com.github.RahulJanagouda:StatusStories:1.0.1'
 	}
-
 ```
 
 ## How to Use
