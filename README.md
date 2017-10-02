@@ -71,13 +71,6 @@ Launch the activity with the configuration
         startActivity(a);
 ```
 
-
-If you get error while launching the Activity Add this to your project manifest inside <application> tag
-
-```xml
-        <activity android:name="com.rahuljanagouda.statussories.StatusStoriesActivity"/>
-```
-
 Inspired by [StoriesProgressView](https://github.com/shts/StoriesProgressView)
 
 
