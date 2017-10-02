@@ -78,8 +78,6 @@ If you get error while launching the Activity Add this to your project manifest 
         <activity android:name="com.rahuljanagouda.statussories.StatusStoriesActivity"/>
 ```
 
-
-## Pulls are most welcome
 Inspired by [StoriesProgressView](https://github.com/shts/StoriesProgressView)
 
 
