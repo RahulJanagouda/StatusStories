@@ -73,6 +73,12 @@ Launch the activity with the configuration
 
 Inspired by [StoriesProgressView](https://github.com/shts/StoriesProgressView)
 
+# TODO
+
+- [ ] Write tests 🌚
+- [ ] Pre-fetch/pre-load the next image
+- [ ] Supporting customizing contents loaded in each screen Video, Gifs, anyt view
+- [ ] Implement swipeable
 
 ## License
 
