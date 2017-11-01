@@ -71,8 +71,6 @@ Launch the activity with the configuration
         startActivity(a);
 ```
 
-Inspired by [StoriesProgressView](https://github.com/shts/StoriesProgressView)
-
 # TODO
 
 - [ ] Write tests 🌚
