@@ -1,12 +1,13 @@
+<a href="https://www.uplabs.com/posts/statusstories" target="_blank"><img src="images/demo.gif" alt="Free Bootstrap Theme for Developers and Startups" align="middle" /></a>
+
+
 # StatusStories
-#### [APK Link](https://goo.gl/jZzyg8) | [Video Link](https://goo.gl/7Jx6Hx)
+#### [APK Link](https://goo.gl/jZzyg8) | [Video Link](https://goo.gl/7Jx6Hx) | [Up labs](https://www.uplabs.com/posts/statusstories)
 StatusStories helps you implement Photo Stories similar to
 - Snapchat stories
 - Instagram stories
 - Whatsapp Statuses
 - Facebook Messenger Stories
-
-<img src="images/demo.gif" width=216 height=400 />
 
 <img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 />
 
