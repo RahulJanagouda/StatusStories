@@ -9,9 +9,7 @@ StatusStories helps you implement Photo Stories similar to
 - Whatsapp Statuses
 - Facebook Messenger Stories
 
-<img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 />
-
-<img src="images/i0006.jpg" width=216 height=400 /> <img src="images/i0004.jpg" width=216 height=400 />
+<img src="images/i0001.jpg" width=216 height=400 /> <img src="images/i0002.jpg" width=216 height=400 /> <img src="images/i0006.jpg" width=216 height=400 /> <img src="images/i0004.jpg" width=216 height=400 />
 
 
 ## Features at glance
