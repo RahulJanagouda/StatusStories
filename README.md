@@ -68,8 +68,9 @@ Launch the activity with the configuration
         a.putExtra(StatusStoriesActivity.IS_CACHING_ENABLED_KEY, true);
         a.putExtra(StatusStoriesActivity.IS_TEXT_PROGRESS_ENABLED_KEY, true);
         startActivity(a);
-```
 
+```
+Inspired by [StoriesProgressView](https://github.com/shts/StoriesProgressView)
 # TODO
 
 - [ ] Write tests 🌚
