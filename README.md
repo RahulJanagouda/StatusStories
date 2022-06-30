@@ -2,7 +2,7 @@
 
 
 # StatusStories
-#### [APK Link](https://goo.gl/jZzyg8) | [Video Link](https://goo.gl/7Jx6Hx) | [Up labs](https://www.uplabs.com/posts/statusstories)
+#### [APK Link](https://drive.google.com/file/d/0B4wzT_AFTGhnY3NlNFQzVzdxOHM/view?usp=sharing&resourcekey=0-IhNxXVA5E5wCBPXcwgd_Ig) | [Video Link](https://drive.google.com/file/d/0B4wzT_AFTGhnYVRaZmtzV2ZBLUU/view?usp=sharing&resourcekey=0-ierphtAdiUJkY9tvCfhTlQ) | [Up labs](https://www.uplabs.com/posts/statusstories)
 StatusStories helps you implement Photo Stories similar to
 - Snapchat stories
 - Instagram stories
